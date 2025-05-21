@@ -1,0 +1,19 @@
+create database ticket_universe;
+
+use ticket_universe;
+
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE bookings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255),
+    movie_title VARCHAR(255),
+    seat_number VARCHAR(10),
+    schedule_time VARCHAR(100) DEFAULT NULL
+);
